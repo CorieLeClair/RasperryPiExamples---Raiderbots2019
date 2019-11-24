@@ -20,9 +20,14 @@ import com.pi4j.io.gpio.trigger.GpioSetStateTrigger;
 import com.pi4j.io.gpio.trigger.GpioSyncStateTrigger;
 
 
+// Corie LeClair example code for RPI3 - Raiderbots 2019
+// Basic code using Java to check for input from RPI and do an action. 
+// Used button and LED to test 
+// outputOne is an LED
+// inputOne is a button
+
 public class InputListenerBasic{
     public static void main(String args[]) throws InterruptedException{
-        int status = 0;
         // final means the value will not change
         final GpioController mainGpio = GpioFactory.getInstance(); // gets the RPI state of GPIO pins
         final GpioPinDigitalInput inputOne = mainGpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN); // telling program where and how to collect input
@@ -31,7 +36,7 @@ public class InputListenerBasic{
 
         inputOne.addListener(new GpioPinListenerDigital() { // listens for any time the voltage from an input changes
             public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event){ // does things when voltage changes
-                System.out.print("CLICKED LOLS");
+                System.out.print("Input button has been activated");
                 outputOne.toggle();
             }
         });
