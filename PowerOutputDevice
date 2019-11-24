@@ -22,6 +22,7 @@ import com.pi4j.io.gpio.trigger.GpioSyncStateTrigger;
 
 // Corie LeClair example code for RPI3 - Raiderbots 2019
 // Basic code using Java to power an output device. Power on basic objects like an LED, Buzzer or Motor.
+// in this example outputOne is an LED, but was tested with buzzer and LED both.
 
 
 public class PowerOutputice{
