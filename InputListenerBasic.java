@@ -20,7 +20,7 @@ import com.pi4j.io.gpio.trigger.GpioSetStateTrigger;
 import com.pi4j.io.gpio.trigger.GpioSyncStateTrigger;
 
 
-public class Main{
+public class InputListenerBasic{
     public static void main(String args[]) throws InterruptedException{
         int status = 0;
         // final means the value will not change
