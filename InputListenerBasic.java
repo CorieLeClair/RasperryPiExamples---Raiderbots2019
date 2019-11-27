@@ -38,11 +38,13 @@ public class InputListenerBasic{
             public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event){ // does things when voltage changes
                 System.out.print("Input button has been activated");
                 outputOne.toggle();
+                // to make the outputOne on a timer use outputOne.pulse(time);
             }
         });
 
         while(true){ // runs as long as the application is running
             Thread.sleep(50); // refresh application rate
+            // delete Thread.sleep() if no time is needed between refresh!
         }
 
     }
